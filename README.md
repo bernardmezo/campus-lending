@@ -64,15 +64,11 @@ The system replaces traditional paper-based or spreadsheet-driven campus invento
 ## Contract Details
 
 - **Network**: Stellar Testnet (Soroban)
-- **Contract ID**: `PLACEHOLDER_CONTRACT_ID`
-
-> ⚠️ *Replace `PLACEHOLDER_CONTRACT_ID` with your actual deployed contract ID after deployment to testnet.*
+- **Contract ID**: `CB45BEPIDAUMGFGVEB6E4DSKUWOCAZ23XDQQKMFLQZRC6G72CARFSL4L`
 
 ### Testnet Deployment Screenshot
 
 ![Testnet Screenshot](screenshot.png)
-
-> ⚠️ *Replace `screenshot.png` with an actual screenshot of your contract deployment on the Stellar testnet.*
 
 ## Data Models
 
@@ -143,26 +139,6 @@ cargo build --target wasm32-unknown-unknown --release
 ### Test
 ```bash
 cargo test
-```
-
-### Deploy to Testnet
-```bash
-# Generate keypair
-stellar keys generate --global deployer --network testnet
-
-# Deploy contract
-stellar contract deploy \
-  --wasm target/wasm32-unknown-unknown/release/kampus_loan.wasm \
-  --source deployer \
-  --network testnet
-
-# Initialize contract
-stellar contract invoke \
-  --id <CONTRACT_ID> \
-  --source deployer \
-  --network testnet \
-  -- initialize \
-  --admin <ADMIN_ADDRESS>
 ```
 
 ### Example: Add an Item
